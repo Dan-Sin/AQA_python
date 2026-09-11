@@ -1,0 +1,18 @@
+# Виртуальные окружения Python
+.venv/
+venv/
+env_for_learning/
+
+# Служебные файлы Python
+__pycache__/
+*.py[cod]
+
+# Настройки редакторов
+.idea/
+.vscode/
+
+# Локальные секреты
+.env
+
+# Системные файлы macOS
+.DS_Store
