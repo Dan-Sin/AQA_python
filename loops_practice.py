@@ -21,6 +21,7 @@ def get_day_name(day: int) -> str:
         case _:
             return "ОШИБКА: Неизвестный день недели"
 
+
 print(get_day_name(3))
 print(get_day_name(8))
 
@@ -36,6 +37,7 @@ def find_max_number():
 
     print(max_number)
 
+
 find_max_number()
 
 
@@ -48,12 +50,14 @@ def stop_at_five():
         if count == 5:
             break
 
+
 stop_at_five()
 
 
 def create_strings():
     my_strings = [f"str{b}" for b in range(10)]
     print(my_strings)
+
 
 create_strings()
 
@@ -71,6 +75,7 @@ def simulate_load():
 
         time.sleep(pause_sec)
 
+
 simulate_load()
 
 
@@ -82,6 +87,7 @@ class Car:
 
     def print_car_info(self):
         print(f"{self.brand} {self.model} {self.year}")
+
 
 car1 = Car("BMW", "X5", 2023)
 car2 = Car("Toyota", "Camry", 2020)
@@ -96,14 +102,19 @@ class Lead:
     def __init__(self, name):
         self.name = name
 
+
 def change_name(lead, new_name):
     lead.name = new_name
+
 
 lead = Lead("Danil")
 
 print(lead.name)
 
-change_name(lead, "Polikarp")  # в функцию change_name передаем тот же объект Lead, а не его копию. Функция меняет значение файла name
+change_name(lead, "Polikarp")
+# в функцию change_name передаем тот же объект Lead, а не его копию.
+# Функция меняет значение файла name
+
 
 print(lead.name)
 
@@ -124,6 +135,7 @@ print(lead.name)
 
 # закрепил задачкой выше, далее задача из карточки
 
+
 class Student:
     def __init__(self, name, age, grades):
         self.name = name
@@ -135,6 +147,7 @@ class Student:
             return 0
 
         return sum(self.grades) / len(self.grades)
+
 
 student1 = Student("Danil", 35, [5, 4, 3, 5])
 student2 = Student("Polikarp", 54, [])
@@ -176,15 +189,7 @@ good_students = [
     if current_student.get_avg_grades() > grade_limit
 ]
 
-student_names = [
-    selected_student.name
-    for selected_student in good_students
-]
-
+student_names = [selected_student.name for selected_student in good_students]
 
 
 print(student_names)
-
-
-
-
