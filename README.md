@@ -6,23 +6,41 @@
 
 ```text
 tests/
-└── test_sample.py
+├── api/
+├── ui/
+├── conftest.py
+├── test_module_fixture.py
+├── test_parametrize.py
+└── test_second_file.py
 
-hello.py
+pytest.ini
 requirements.txt
+.env.example
 .gitignore
 README.md
 ```
 
 ## Запуск проекта с нуля
 
-### 1. Создать виртуальное окружение
+### 1. Клонировать репозиторий
+
+```bash
+git clone https://github.com/Dan-Sin/AQA_python
+```
+
+### 2. Перейти в папку проекта
+
+```bash
+cd PythonProject
+```
+
+### 3. Создать виртуальное окружение
 
 ```bash
 python3 -m venv .venv
 ```
 
-### 2. Активировать виртуальное окружение
+### 4. Активировать виртуальное окружение
 
 На macOS / Linux:
 
@@ -30,16 +48,22 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Установить зависимости
+### 5. Установить зависимости
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-### 4. Запустить тесты
+### 6. Запустить все тесты
 
 ```bash
 python -m pytest
+```
+
+### 7. Запустить только тесты с маркером math
+
+```bash
+python -m pytest -m math
 ```
 
 Если всё настроено правильно, тесты должны завершиться успешно.
